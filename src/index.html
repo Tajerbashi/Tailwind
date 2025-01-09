@@ -6,48 +6,44 @@
     <link rel="stylesheet" href="./css//style.css" />
     <title>Tailwind Css & Typescript</title>
   </head>
-  <body class="w-screen y-screen bg-slate-800 text-[#eeeeee]">
-    <header>
-      <div class="flex flex-col m-4 items-center bg-slate-950 text-[#eaeaea]">
-        <h1 class="my-4">Header</h1>
-      </div>
-    </header>
-    <nav>
-      <div
-        class="flex flex-col gap-2 m-4 items-center bg-[#000000] text-[#eaeaea]"
-      >
-        <div class="m-[10px]">
-          <ul class="flex sm:flex-col flex-row items-start bg-slate-600">
-            <li class="bg-slate-950 m-4 rounded-2xl">
-              <a href="#">Home</a>
-            </li>
-            <li class="bg-slate-950 m-4 rounded-2xl">
-              <a href="#">Contact</a>
-            </li>
-            <li class="bg-slate-950 m-4 rounded-2xl">
-              <a href="#" class="m-4">About</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <div>
+  <body class="w-screen y-screen bg-slate-950 text-[#eeeeee]">
+    <div class="m-4 p-5 bg-slate-800 text-center">
+      <header>Header</header>
+    </div>
+
+    <div class="m-4 p-5 bg-[#eeeeea] text-center">
+      <nav class="container">
+        <ul class="flex flex-row gap-2 items-center">
+          <li class="bg-slate-900">Home</li>
+          <li class="bg-slate-900">Home</li>
+          <li class="bg-slate-900">Home</li>
+          <li class="bg-slate-900">Home</li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="m-4 p-5 bg-slate-500 text-center">
       <section>
-        <div class="container grid grid-col-4 gap-3">
-          <div class="bg-slate-900">Content A</div>
-          <div class="bg-slate-700">2</div>
-          <div class="bg-slate-700">3</div>
-          <div class="bg-slate-700">4</div>
+        <div class="container">
+          <div class="flex flex-col-3 flex-row items-center justify-around">
+            <div class="bg-slate-950 p-5">1</div>
+            <div class="bg-slate-950 p-5">1</div>
+            <div class="bg-slate-950 p-5">1</div>
+            <div class="bg-slate-950 p-5">1</div>
+            <div class="bg-slate-950 p-5">1</div>
+            <div class="bg-slate-950 p-5">1</div>
+            <div class="bg-slate-950 p-5">1</div>
+            <div class="bg-slate-950 p-5">1</div>
+            <div class="bg-slate-950 p-5">1</div>
+            <div class="bg-slate-950 p-5">1</div>
+          </div>
         </div>
       </section>
     </div>
-    <footer>
-      <div
-        class="flex flex-col fixed m-4 items-center bg-slate-950 text-[#eaeaea]"
-      >
-        <h1 class="my-4">Footer</h1>
-      </div>
-    </footer>
+
+    <div class="m-4 p-5 bg-slate-500 text-center">
+      <footer>Footer</footer>
+    </div>
 
     <script src="./js/main.js" type="module" defer></script>
   </body>
