@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "lite-server",
     "watch": "tailwindcss -i ./tailwindcss.css -o ./src/css/style.css --watch"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "lite-server": "^2.6.1",
     "tailwindcss": "^3.4.17"
   },
   "dependencies": {

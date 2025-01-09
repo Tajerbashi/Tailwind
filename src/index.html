@@ -7,61 +7,48 @@
     <title>Tailwind Css & Typescript</title>
   </head>
   <body class="w-screen y-screen bg-slate-800 text-[#eeeeee]">
-    <div
-      class="container flex flex-row bg-slate-950 m-auto my-5 p-5 rounded-2xl items-center justify-around gap-4"
-    >
-      <div class="bg-slate-100 text-[#000000] p-[10px] h-[100px] order-4">
-        01 : order-4
+    <header>
+      <div class="flex flex-col m-4 items-center bg-slate-950 text-[#eaeaea]">
+        <h1 class="my-4">Header</h1>
       </div>
-      <div class="bg-slate-200 text-[#000000] p-[10px] h-[80px] order-5">
-        02 : order-5
+    </header>
+    <nav>
+      <div
+        class="flex flex-col gap-2 m-4 items-center bg-[#000000] text-[#eaeaea]"
+      >
+        <div class="m-[10px]">
+          <ul class="flex sm:flex-col flex-row items-start bg-slate-600">
+            <li class="bg-slate-950 m-4 rounded-2xl">
+              <a href="#">Home</a>
+            </li>
+            <li class="bg-slate-950 m-4 rounded-2xl">
+              <a href="#">Contact</a>
+            </li>
+            <li class="bg-slate-950 m-4 rounded-2xl">
+              <a href="#" class="m-4">About</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="bg-slate-300 text-[#000000] p-[10px] h-[60px] order-1">
-        03 : order-1
-      </div>
-      <div class="bg-slate-400 text-[#000000] p-[10px] h-[40px] order-2">
-        04 : order-2
-      </div>
-      <div class="bg-slate-500 text-[#000000] p-[10px] h-[70px] order-3">
-        05 : order-3
-      </div>
+    </nav>
+    <div>
+      <section>
+        <div class="container grid grid-col-4 gap-3">
+          <div class="bg-slate-900">Content A</div>
+          <div class="bg-slate-700">2</div>
+          <div class="bg-slate-700">3</div>
+          <div class="bg-slate-700">4</div>
+        </div>
+      </section>
     </div>
+    <footer>
+      <div
+        class="flex flex-col fixed m-4 items-center bg-slate-950 text-[#eaeaea]"
+      >
+        <h1 class="my-4">Footer</h1>
+      </div>
+    </footer>
 
-    <div
-      class="container grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-flow-row gap-3 m-auto"
-    >
-      <div
-        class="bg-slate-100 text-[#000000] p-[10px] h-[100px] order-4 rounded-xl"
-      >
-        01 : order-4
-      </div>
-      <div
-        class="bg-slate-200 text-[#000000] p-[10px] h-[100px] order-5 rounded-xl"
-      >
-        02 : order-5
-      </div>
-      <div
-        class="bg-slate-300 text-[#000000] p-[10px] h-[100px] order-1 rounded-xl"
-      >
-        03 : order-1
-      </div>
-      <div
-        class="bg-slate-400 text-[#000000] p-[10px] h-[100px] order-2 rounded-xl"
-      >
-        04 : order-2
-      </div>
-      <div
-        class="bg-slate-500 text-[#000000] p-[10px] h-[100px] order-3 rounded-xl"
-      >
-        05 : order-3
-      </div>
-    </div>
-
-    <div
-      class="h-[200px] bg-[#2b2b2b] sm:bg-[#003cff] md:bg-[#590094] lg:bg-[#850000] xl:bg-[#567a00] text-[#ffffff] text-center m-4 rounded-xl"
-    >
-      Content
-    </div>
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js" type="module" defer></script>
   </body>
 </html>
