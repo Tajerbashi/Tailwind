@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <base href="/" />
+    <meta charset="UTF-8" />
+    <title>AngularJS With Tailwind</title>
+    <!-- Link Tailwind CSS via CDN for simplicity -->
+
+    <link rel="stylesheet" href="./app/styles/styles.css" />
+    <link rel="stylesheet" href="./app/styles/index.style.css" />
+    <script src="./app/libs/angular/angular.min.js"></script>
+    <script src="./app/libs/angular/angular-route.min.js"></script>
+    <script src="./app/libs/ocLazyLoad/ocLazyLoad.min.js"></script>
+
+    <script src="./app/core/app.js"></script>
+    <script src="./app/core/app.factory.js"></script>
+    <script src="./app/core/app.provider.js"></script>
+    <script src="./app/core/app.states.js"></script>
+    <script src="./app/core/app.config.js"></script>
+    <script src="./app/core/app.service.js"></script>
+    <script src="./app/core/app.directive.js"></script>
+    <script src="./app/core/app.filter.js"></script>
+    <script src="./app/core/app.idle.js"></script>
+    <script src="./app/core/app.oc_lazy_load.js"></script>
+  </head>
+  <body
+    ng-controller="AppController"
+    class="grid grid-rows-[auto,1fr,auto] min-h-screen"
+  >
+    <!-- Header Section -->
+    <app-header></app-header>
+    <div ng-view></div>
+    <!-- Footer Section -->
+    <app-footer class="mt-auto"></app-footer>
+
+    <script src="./app/pages/home/home.controller.js"></script>
+    <script src="./app/pages/contact/contact.controller.js"></script>
+    <script src="./app/pages/about/about.controller.js"></script>
+  </body>
+</html>

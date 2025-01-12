@@ -4,6 +4,8 @@
   "description": "<div align=\"center\">\r   <h1>Angular JS With TailWind</h1>\r </div>",
   "main": "index.js",
   "scripts": {
+    "start": "lite-server",
+    "gencss": "tailwindcss -i ./app/libs/tailwind/tailwind.css -o ./app/styles/styles.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/Tajerbashi/Tailwind/issues"
   },
-  "homepage": "https://github.com/Tajerbashi/Tailwind#readme"
+  "homepage": "https://github.com/Tajerbashi/Tailwind#readme",
+  "dependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
 }
