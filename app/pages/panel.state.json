@@ -1,7 +1,8 @@
 {
   "scripts": [
-    "https://code.jquery.com/jquery-3.6.0.min.js",
-    "https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js",
-    "./app/pages/routes.js"
+    "./app/pages/routes.js",
+    "./app/pages/home/home.controller.js",
+    "./app/pages/contact/contact.controller.js",
+    "./app/pages/about/about.controller.js"
   ]
 }

@@ -1,5 +1,40 @@
-<!-- about.html -->
-<div class="container">
-  <h1>{{message}}</h1>
-  <p>This is the about page where you can learn more about us.</p>
+<div class="app-container bg-slate-700">
+  <div class="app-container-title">
+    <h1>{{title}}</h1>
+  </div>
+  <div class="app-container-content">
+    <h1>{{content}}</h1>
+  </div>
+  <div class="app-container-footer">
+    <button
+      ng-click="ChangeContent('Save')"
+      class="text-gray-100 px-6 hover:bg-yellow-500 m-4 rounded-full text-lg font-semibold transition duration-300"
+    >
+      Save
+    </button>
+    <button
+      ng-click="ChangeContent('Cancel')"
+      class="text-gray-100 px-6 hover:bg-yellow-500 m-4 rounded-full text-lg font-semibold transition duration-300"
+    >
+      Cancel
+    </button>
+    <button
+      ng-click="ChangeContent('Delete')"
+      class="text-gray-100 px-6 hover:bg-yellow-500 m-4 rounded-full text-lg font-semibold transition duration-300"
+    >
+      Delete
+    </button>
+    <button
+      ng-click="ChangeContent('Submit')"
+      class="text-gray-100 px-6 hover:bg-yellow-500 m-4 rounded-full text-lg font-semibold transition duration-300"
+    >
+      Submit
+    </button>
+    <button
+      ng-click="ChangeContent('Controller')"
+      class="text-gray-100 px-6 hover:bg-yellow-500 m-4 rounded-full text-lg font-semibold transition duration-300"
+    >
+      Controller
+    </button>
+  </div>
 </div>

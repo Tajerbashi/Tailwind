@@ -4,7 +4,7 @@
   "description": "<div align=\"center\">\r   <h1>Angular JS With TailWind</h1>\r </div>",
   "main": "index.js",
   "scripts": {
-    "start": "lite-server",
+    "start": "concurrently \"lite-server\" \"npm run gencss\"",
     "gencss": "tailwindcss -i ./app/libs/tailwind/tailwind.css -o ./app/styles/styles.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,6 +24,7 @@
     "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
+    "concurrently": "^9.1.2",
     "lite-server": "^2.6.1"
   }
 }
