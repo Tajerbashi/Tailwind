@@ -1,0 +1,12 @@
+{
+    "port": 3000,
+    "server": {
+      "baseDir": "./",  // Serve files from the current directory
+      "index": "app/index.html",  // Set your entry file
+      "routes": {
+        "/node_modules": "node_modules"  // Map node_modules for imports
+      }
+    },
+    "files": ["app/**/*.{html,js,css}"]  // Watch these files for changes
+  }
+  

@@ -1,0 +1,39 @@
+angularjs-app/
+├── app/
+│   ├── components/          # Feature-specific components (modular structure)
+│   │   └── feature1/        # Example feature folder
+│   │       ├── feature1.controller.js
+│   │       ├── feature1.service.js
+│   │       ├── feature1.template.html
+│   │       └── feature1.module.js
+│   ├── core/                # Core modules, services, and shared logic
+│   │   ├── app.config.js    # Application configuration
+│   │   ├── app.run.js       # Initialization logic
+│   │   └── app.module.js    # Main AngularJS module
+│   ├── shared/              # Reusable directives, filters, etc.
+│   │   ├── directives/      # Shared directives
+│   │   │   └── my-directive.js
+│   │   ├── filters/         # Shared filters
+│   │   │   └── my-filter.js
+│   │   └── services/        # Shared services
+│   │       └── api.service.js
+│   ├── layouts/             # Layout components (header, footer, etc.)
+│   │   ├── header/          # Header layout
+│   │   │   ├── header.controller.js
+│   │   │   ├── header.template.html
+│   │   │   └── header.module.js
+│   │   └── footer/          # Footer layout
+│   │       ├── footer.controller.js
+│   │       ├── footer.template.html
+│   │       └── footer.module.js
+│   ├── styles/              # Global styles (CSS/SCSS)
+│   │   └── styles.css
+│   └── index.html           # Main HTML file
+├── assets/                  # Static assets (images, fonts, etc.)
+│   ├── images/
+│   │   └── logo.png
+│   └── fonts/
+│       └── custom-font.ttf
+├── node_modules/            # Node dependencies (if using npm)
+├── package.json             # Dependencies and project metadata
+└── README.md                # Documentation
