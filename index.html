@@ -8,30 +8,48 @@
 
     <link rel="stylesheet" href="./app/styles/styles.css" />
     <link rel="stylesheet" href="./app/styles/index.style.css" />
+    <link rel="stylesheet" href="./app/libs/bootstrap/all.min.css" />
+    <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+
+    <!-- AngularJS Core -->
     <script src="./app/libs/angular/angular.min.js"></script>
     <script src="./app/libs/angular/angular-route.min.js"></script>
     <script src="./app/libs/ocLazyLoad/ocLazyLoad.min.js"></script>
 
+    <!-- Application Core -->
     <script src="./app/core/app.js"></script>
+    <script src="./app/core/app.config.js"></script>
+    <script src="./app/core/app.states.js"></script>
     <script src="./app/core/app.factory.js"></script>
     <script src="./app/core/app.provider.js"></script>
-    <script src="./app/core/app.states.js"></script>
-    <script src="./app/core/app.config.js"></script>
     <script src="./app/core/app.service.js"></script>
     <script src="./app/core/app.directive.js"></script>
     <script src="./app/core/app.filter.js"></script>
     <script src="./app/core/app.idle.js"></script>
     <script src="./app/core/app.oc_lazy_load.js"></script>
+
+    <!-- Directives -->
+    <script src="./app/directives/header/header.directive.js"></script>
+    <script src="./app/directives/footer/footer.directive.js"></script>
+
+    <!-- Controllers -->
+    <script src="./app/pages/login/login.controller.js"></script>
+    <script src="./app/pages/home/home.controller.js"></script>
+    <script src="./app/pages/contact/contact.controller.js"></script>
+    <script src="./app/pages/about/about.controller.js"></script>
   </head>
   <body
     ng-controller="AppController"
     class="grid grid-rows-[auto,1fr,auto] min-h-screen"
   >
     <!-- Header Section -->
-    <app-header></app-header>
+    <app-header ng-if="isLoggedIn()"></app-header>
     <div ng-view></div>
     <!-- Footer Section -->
-    <app-footer class="mt-auto"></app-footer>
+    <app-footer ng-if="isLoggedIn()"></app-footer>
 
     <script src="./app/pages/home/home.controller.js"></script>
     <script src="./app/pages/contact/contact.controller.js"></script>

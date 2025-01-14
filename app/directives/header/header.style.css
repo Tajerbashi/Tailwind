@@ -1,0 +1,17 @@
+#ang {
+  color: rgb(199, 139, 255);
+  margin: 10px;
+  cursor: pointer;
+}
+#ang:hover {
+  color: rgb(181, 101, 255);
+}
+#tail {
+  margin: 10px;
+  color: rgb(103, 199, 255);
+  cursor: pointer;
+}
+
+#tail:hover {
+  color: rgb(31, 173, 255);
+}
