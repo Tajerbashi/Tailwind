@@ -23,8 +23,9 @@ app.config(function ($routeProvider) {
       controller: "HomeController",
       resolve: {
         auth: function (AuthService, $location) {
+          var auth = new AuthService();
           // Check if the user is logged in
-          if (!AuthService.isLoggedIn()) {
+          if (!auth.isLoggedIn()) {
             $location.path("/login"); // Redirect to login if not authenticated
           }
         },
@@ -40,7 +41,8 @@ app.config(function ($routeProvider) {
       controller: "AboutController",
       resolve: {
         auth: function (AuthService, $location) {
-          if (!AuthService.isLoggedIn()) {
+          var auth = new AuthService();
+          if (!auth.isLoggedIn()) {
             $location.path("/login");
           }
         },
@@ -56,7 +58,8 @@ app.config(function ($routeProvider) {
       controller: "ContactController",
       resolve: {
         auth: function (AuthService, $location) {
-          if (!AuthService.isLoggedIn()) {
+          var auth = new AuthService();
+          if (!auth.isLoggedIn()) {
             $location.path("/login");
           }
         },
@@ -71,6 +74,6 @@ app.config(function ($routeProvider) {
 
     // Default Route
     .otherwise({
-      redirectTo: "/", // Redirect to home for undefined routes
+      redirectTo: "/login", // Redirect to home for undefined routes
     });
 });

@@ -14,14 +14,13 @@ const app = angular.module("app", ["ngRoute", "oc.lazyLoad"]);
 // });
 
 
-console.log("App : ", app);
 
 app.controller("AppController", function ($scope, ScriptLoader,AuthService) {
   // Load scripts dynamically
   console.log("AppController Controller",AuthService);
   ScriptLoader.loadScripts();
   let authService =new AuthService();
-  $scope.isLoggedIn = authService.isLoggedIn()
+  $scope.isLoggin = authService.isLoggedIn()
   $scope.logout = function () {
     AuthService.logout();
   };

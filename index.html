@@ -46,10 +46,10 @@
     class="grid grid-rows-[auto,1fr,auto] min-h-screen"
   >
     <!-- Header Section -->
-    <app-header ng-if="isLoggedIn()"></app-header>
+    <app-header ng-if="isLoggin"></app-header>
     <div ng-view></div>
     <!-- Footer Section -->
-    <app-footer ng-if="isLoggedIn()"></app-footer>
+    <app-footer ng-if="isLoggin"></app-footer>
 
     <script src="./app/pages/home/home.controller.js"></script>
     <script src="./app/pages/contact/contact.controller.js"></script>

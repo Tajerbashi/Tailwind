@@ -1,13 +1,32 @@
 <header class="bg-gray-800 text-white py-4">
-  <div class="container mx-auto flex justify-between items-center">
-    <h1 class="text-2xl font-bold">My AngularJS App</h1>
+  <div class="mx-auto flex justify-between items-center">
+    <h1 class="text-2xl font-bold">
+      <span id="ang">Angular</span>
+      &
+      <span id="tail">Tailwind</span>
+    </h1>
     <nav>
-      <ul class="flex space-x-4">
+      <ul class="flex space-x-4 pr-16">
         <li><a href="#!/" class="text-white hover:underline">Home</a></li>
         <li><a href="#!/about" class="text-white hover:underline">About</a></li>
-        <li><a href="#!/contact" class="text-white hover:underline">Contact</a></li>
         <li>
-          <button ng-click="logout()" class="text-white hover:underline">
+          <a href="#!/contact" class="text-white hover:underline">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <nav>
+      <ul class="flex space-x-4 pr-16">
+        <li>
+          <span id="profile">{{username}}</span>
+        </li>
+        <li>
+          <button ng-click="logout()" class="text-[#24deff] hover:underline">
+            Profile
+          </button>
+        </li>
+
+        <li>
+          <button ng-click="logout()" class="text-[#ff1717] hover:underline">
             Logout
           </button>
         </li>
