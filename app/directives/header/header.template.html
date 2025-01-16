@@ -1,32 +1,38 @@
-<header class="bg-gray-800 text-white py-4">
+<header id="header" class=" text-white py-4">
   <div class="mx-auto flex justify-between items-center">
     <h1 class="text-2xl font-bold">
-      <span id="ang">Angular</span>
+      <span id="ang">Angular JS</span>
       &
       <span id="tail">Tailwind</span>
     </h1>
     <nav>
       <ul class="flex space-x-4 pr-16">
-        <li><a href="#!/" class="text-white hover:underline">Home</a></li>
+        <li><a href="#!/" class="text-white hover:underline">Dashboard</a></li>
         <li><a href="#!/about" class="text-white hover:underline">About</a></li>
         <li>
           <a href="#!/contact" class="text-white hover:underline">Contact</a>
         </li>
+
+        <nav>
+          <ul class="flex space-x-6">
+            <li><a href="#about" class="hover:underline">About Me</a></li>
+            <li><a href="#skills" class="hover:underline">Skills</a></li>
+            <li><a href="#contact" class="hover:underline">Contact</a></li>
+          </ul>
+        </nav>
       </ul>
     </nav>
     <nav>
       <ul class="flex space-x-4 pr-16">
+      
         <li>
-          <span id="profile">{{username}}</span>
-        </li>
-        <li>
-          <button ng-click="logout()" class="text-[#24deff] hover:underline">
-            Profile
+          <button id="profile" class="hidden md:flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300">
+            {{username}}
           </button>
         </li>
 
         <li>
-          <button ng-click="logout()" class="text-[#ff1717] hover:underline">
+          <button ng-click="logout()" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-300">
             Logout
           </button>
         </li>

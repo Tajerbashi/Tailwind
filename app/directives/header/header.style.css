@@ -1,3 +1,12 @@
+#header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999999999;
+  box-shadow: 0 2px 20px 0px #02000e;
+  backdrop-filter: blur(10px);
+}
+
 #ang {
   color: rgb(199, 139, 255);
   margin: 10px;
@@ -17,16 +26,9 @@
 }
 
 #profile{
-  background: rgb(5, 100, 163);
-  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.5);
-  padding: 5px 50px;
-  border-radius: 5px;
-  cursor: pointer;
-  
 }
 
 #profile:hover{
-  border: 1px solid rgba(0, 0, 0, 0.5);
   box-shadow: 0 2px 10px 0 black;
 }
