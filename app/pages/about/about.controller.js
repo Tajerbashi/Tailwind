@@ -1,8 +1,11 @@
-app.controller("AboutController", function ($scope) {
-  console.log("AboutController Loaded");
-  $scope.title = "Welcome to the About Page!";
-  $scope.content = "Content";
-  $scope.ChangeContent = (value) => {
-    $scope.content = value;
-  };
-});
+app.controller("AboutController", [
+  "$scope",
+  function ($scope) {
+    $scope.message = "This is the Calendar Page!";
+    $scope.title = "Welcome to the About Page!";
+    $scope.content = "Content";
+    $scope.ChangeContent = (value) => {
+      $scope.content = value;
+    };
+  },
+]);

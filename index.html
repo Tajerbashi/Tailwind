@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="./app/styles/index.style.css" />
     <link rel="stylesheet" href="./app/libs/bootstrap/all.min.css" />
     <link
-    href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet"
-  />
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
     <!-- AngularJS Core -->
     <script src="./app/libs/angular/angular.min.js"></script>
@@ -21,7 +21,7 @@
 
     <!-- Application Core -->
     <script src="./app/core/app.js"></script>
-    <script src="./app/core/app.config.js"></script>
+    <script type="module" src="./app/core/app.config.js" defer></script>
     <script src="./app/core/app.states.js"></script>
     <script src="./app/core/app.factory.js"></script>
     <script src="./app/core/app.provider.js"></script>
@@ -35,24 +35,20 @@
     <script src="./app/directives/header/header.directive.js"></script>
     <script src="./app/directives/footer/footer.directive.js"></script>
 
-    <!-- Controllers -->
+    <!-- Controller -->
     <script src="./app/pages/login/login.controller.js"></script>
-    <script src="./app/pages/home/home.controller.js"></script>
-    <script src="./app/pages/contact/contact.controller.js"></script>
+    <script src="./app/pages/dashboard/dashboard.controller.js"></script>
+    <script src="./app/pages/profile/profile.controller.js"></script>
+    <script src="./app/pages/aboutMe/aboutMe.controller.js"></script>
     <script src="./app/pages/about/about.controller.js"></script>
   </head>
-  <body
-    ng-controller="AppController"
-    class="grid grid-rows-[auto,1fr,auto] min-h-screen"
-  >
+  <body ng-controller="AppController" class="h-screen w-screen">
     <!-- Header Section -->
-    <app-header ng-if="isLoggin"></app-header>
-    <div ng-view></div>
+    <app-header ng-if="isLoggedIn"></app-header>
+    <div class="app-main-container">
+      <ng-view></ng-view>
+    </div>
     <!-- Footer Section -->
-    <app-footer ng-if="isLoggin"></app-footer>
-
-    <script src="./app/pages/home/home.controller.js"></script>
-    <script src="./app/pages/contact/contact.controller.js"></script>
-    <script src="./app/pages/about/about.controller.js"></script>
+    <app-footer ng-if="isLoggedIn"></app-footer>
   </body>
 </html>

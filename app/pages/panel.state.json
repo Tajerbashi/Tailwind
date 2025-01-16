@@ -1,7 +1,17 @@
 {
   "scripts": [
-    "./app/pages/routes.js",
-    "./app/pages/home/home.controller.js",
+    "./app/pages/dashboard/dashboard.controller.js",
+    "./app/pages/posts/posts.controller.js",
+    "./app/pages/team/team.controller.js",
+    "./app/pages/setting/setting.controller.js",
+    "./app/pages/projects/projects.controller.js",
+    "./app/pages/profile/profile.controller.js",
+    "./app/pages/messages/messages.controller.js",
+    "./app/pages/login/login.controller.js",
+    "./app/pages/explore/explore.controller.js",
+    "./app/pages/company/company.controller.js",
+    "./app/pages/calendar/calendar.controller.js",
+    "./app/pages/aboutMe/aboutMe.controller.js",
     "./app/pages/contact/contact.controller.js",
     "./app/pages/about/about.controller.js"
   ]

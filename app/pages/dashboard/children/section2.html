@@ -1,0 +1,16 @@
+<!-- Main Landing Section -->
+<section class="mx-auto px-16 py-16 text-center w-100 relative">
+  <div class="flex flex-wrap justify-between items-center gap-4">
+    <div
+      ng-repeat="item in dashboardSection"
+      class="flex-grow basis-1/4 bg-[#07344e] text-white p-4 rounded-md hover:bg-[#0c122b] cursor-pointer hover:shadow-xl"
+    >
+      <h3
+        class="text-xl bg-[#080218] text-[#ffffff] font-semibold rounded-sm mb-3"
+      >
+        {{item.title}}
+      </h3>
+      <p class="text-[#ffffff]">{{item.description}}</p>
+    </div>
+  </div>
+</section>

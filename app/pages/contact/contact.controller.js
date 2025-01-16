@@ -1,3 +1,6 @@
-app.controller("ContactController", function ($scope) {
-  $scope.message = "Welcome to the Contact Page!";
-});
+app.controller("ContactController", [
+  "$scope",
+  function ($scope) {
+    $scope.message = "This is the Calendar Page!";
+  },
+]);

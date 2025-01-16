@@ -1,21 +1,29 @@
-app.controller("LoginController", function ($scope, $location, AuthService) {
-  var authService = new AuthService();
+app.controller("LoginController", [
+  "$scope",
+  "$location",
+  "AuthService",
+  function ($scope, $location, AuthService) {
+    $scope.message = "This is the Calendar Page!";
+    console.log("$scope : ", $scope);
+    console.log("$scope : ", $location);
 
-  console.log("AuthService : ", authService);
-  console.log("$scope : ", $scope);
-  $scope.loginModel = {
-    email: "kamrantajerbashi@gmail.com",
-    password: "@Tajerbashi!123",
-    username: "Tajerbashi",
-    isRemeber: true,
-  };
+    var authService = new AuthService();
 
-  $scope.login = function () {
-    if (authService.login($scope.loginModel)) {
-      $location.path("/"); // Redirect to home after login
-    } else {
-      $location.path("/login"); // Redirect to home after login
-    }
-    console.log("Login", $scope.loginModel);
-  };
-});
+    $scope.loginModel = {
+      email: "kamrantajerbashi@gmail.com",
+      password: "@Tajerbashi!123",
+      username: "Tajerbashi",
+      isRemeber: true,
+    };
+
+    $scope.login = function () {
+      let res = authService.login($scope.loginModel);
+      console.log("RES : ", res);
+      if (res) {
+        $location.path("/"); // Redirect to home after login
+      } else {
+        $location.path("/login"); // Redirect to home after login
+      }
+    };
+  },
+]);

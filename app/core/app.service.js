@@ -1,21 +1,51 @@
-console.log("App.Service.js Run ...");
+// app.service("ScriptLoaderService", function ($http, $ocLazyLoad, $q) {
+//   // Fetch the JSON file
+//   this.loadScripts = function (jsonPath) {
+//     const deferred = $q.defer();
 
-app.service("ScriptLoader", function ($http) {
-  this.loadScripts = function () {
-    return $http
-      .get("app/pages/panel.state.json") // Path to your JSON file
-      .then(function (response) {
-        var scripts = response.data.scripts;
-        angular.forEach(scripts, function (script) {
-          var scriptTag = document.createElement("script");
-          scriptTag.src = script;
-          scriptTag.type = "text/javascript";
-          scriptTag.async = true;
-          document.head.appendChild(scriptTag);
-        });
-      })
-      .catch(function (error) {
-        console.error("Error loading scripts:", error);
-      });
-  };
-});
+//     $http
+//       .get(jsonPath)
+//       .then(function (response) {
+//         const scripts = response.data.scripts;
+
+//         if (Array.isArray(scripts)) {
+//           // Use $ocLazyLoad to load scripts
+//           $ocLazyLoad
+//             .load(scripts)
+//             .then(function () {
+//               console.log("All scripts loaded successfully!");
+//               deferred.resolve();
+//             })
+//             .catch(function (error) {
+//               console.error("Error loading scripts:", error);
+//               deferred.reject(error);
+//             });
+//         } else {
+//           deferred.reject('Invalid JSON format: "scripts" is not an array');
+//         }
+//       })
+//       .catch(function (error) {
+//         console.error("Error fetching JSON:", error);
+//         deferred.reject(error);
+//       });
+
+//     return deferred.promise;
+//   };
+// });
+
+// app.run([
+//   "$http",
+//   "$ocLazyLoad",
+//   "$q",
+//   function ($http, $ocLazyLoad, $q) {
+//     console.log("1231231231231321");
+//     $http
+//       .get("../pages/panel.state.json")
+//       .then((res) => {
+//         console.log("RES : ", res);
+//       })
+//       .catch((err) => {
+//         console.log("ERROR");
+//       });
+//   },
+// ]);

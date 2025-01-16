@@ -1,0 +1,117 @@
+<header id="header" class="bg-gray-800 text-white py-4">
+  <div class="container mx-auto flex justify-between items-center px-4">
+    <!-- Logo -->
+    <h1 class="text-2xl font-bold">
+      <span id="ang" class="text-blue-400">AngularJS</span>
+      &amp;
+      <span id="tail" class="text-green-400">Tailwind</span>
+    </h1>
+
+    <!-- Mobile Menu Button -->
+    <button
+      id="menu-toggle"
+      class="md:hidden flex items-center text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+      ng-click="isMobileMenuOpen = !isMobileMenuOpen"
+    >
+      Menu
+    </button>
+
+    <!-- Navigation -->
+    <nav id="nav-menu" class="hidden md:flex space-x-6">
+      <a href="#!/" class="hover:underline">Dashboard</a>
+      <a href="#!/about" class="hover:underline">About</a>
+      <a href="#!/contact" class="hover:underline">Contact</a>
+    </nav>
+
+    <!-- Profile and Logout Buttons -->
+    <div class="hidden md:flex space-x-4 items-center">
+      <button
+        id="profile"
+        class="flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
+      >
+        {{username}}
+      </button>
+      <button
+        ng-click="logout()"
+        class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-300"
+      >
+        Logout
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <nav
+    id="mobile-menu"
+    class="md:hidden"
+    ng-class="{'hidden': !isMobileMenuOpen}"
+  >
+    <ul class="flex flex-col space-y-4 p-4">
+      <li class="nav-mobile">
+        <a href="#!/" class="hover:underline">Dashboard</a>
+      </li>
+      <li class="nav-mobile">
+        <a href="#!/about" class="hover:underline">About</a>
+      </li>
+      <li class="nav-mobile">
+        <a href="#!/contact" class="hover:underline">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+==================
+<!-- <header id="header" class=" text-white py-4">
+  <div class="mx-auto flex justify-between items-center">
+    <h1 class="text-2xl font-bold">
+      <span id="ang">Angular JS</span>
+      &
+      <span id="tail">Tailwind</span>
+    </h1>
+    <nav>
+      <ul class="flex space-x-4 pr-16">
+        <li><a href="#!/" class="text-white hover:underline">Dashboard</a></li>
+        <li><a href="#!/about" class="text-white hover:underline">About</a></li>
+        <li>
+          <a href="#!/contact" class="text-white hover:underline">Contact</a>
+        </li>
+
+        <nav>
+          <ul class="flex space-x-6">
+            <li><a href="#about" class="hover:underline">About Me</a></li>
+            <li><a href="#skills" class="hover:underline">Skills</a></li>
+            <li><a href="#contact" class="hover:underline">Contact</a></li>
+          </ul>
+        </nav>
+      </ul>
+    </nav>
+    <nav>
+      <ul class="flex space-x-4 pr-16">
+      
+        <li>
+          <button id="profile" class="hidden md:flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300">
+            {{username}}
+          </button>
+        </li>
+
+        <li>
+          <button ng-click="logout()" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-300">
+            Logout
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header> -->
+
+
+
+
+
+
+
+
+
+
+
+

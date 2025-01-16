@@ -1,5 +1,4 @@
-console.log("App.Config.js is running...");
-
+import { routes } from "../pages/routes.js";
 // Configuring `ocLazyLoad`
 app.config(function ($ocLazyLoadProvider) {
   $ocLazyLoadProvider.config({
@@ -8,72 +7,28 @@ app.config(function ($ocLazyLoadProvider) {
   });
 });
 
-// Configuring `routeProvider` for routes
+// Configuring `$routeProvider` for routes
 app.config(function ($routeProvider) {
-  $routeProvider
-    // Login Route
-    .when("/login", {
-      templateUrl: "app/pages/login/login.view.html",
-      controller: "LoginController",
-    })
-
-    // Home Route (Requires Authentication)
-    .when("/", {
-      templateUrl: "app/pages/home/home.view.html",
-      controller: "HomeController",
+  routes.forEach((element) => {
+    $routeProvider.when(element.path, {
+      templateUrl: element.templateUrl,
+      controller: element.controller,
       resolve: {
         auth: function (AuthService, $location) {
-          var auth = new AuthService();
+          const auth = new AuthService();
           // Check if the user is logged in
           if (!auth.isLoggedIn()) {
             $location.path("/login"); // Redirect to login if not authenticated
           }
         },
-        loadHomeController: function ($ocLazyLoad) {
-          return $ocLazyLoad.load("app/pages/home/home.controller.js");
+        lazyLoad: function ($ocLazyLoad) {
+          return $ocLazyLoad.load(element.resolve);
         },
       },
-    })
-
-    // About Route (Requires Authentication)
-    .when("/about", {
-      templateUrl: "app/pages/about/about.view.html",
-      controller: "AboutController",
-      resolve: {
-        auth: function (AuthService, $location) {
-          var auth = new AuthService();
-          if (!auth.isLoggedIn()) {
-            $location.path("/login");
-          }
-        },
-        loadAboutController: function ($ocLazyLoad) {
-          return $ocLazyLoad.load("app/pages/about/about.controller.js");
-        },
-      },
-    })
-
-    // Contact Route (Requires Authentication)
-    .when("/contact", {
-      templateUrl: "app/pages/contact/contact.view.html",
-      controller: "ContactController",
-      resolve: {
-        auth: function (AuthService, $location) {
-          var auth = new AuthService();
-          if (!auth.isLoggedIn()) {
-            $location.path("/login");
-          }
-        },
-        loadContactController: function ($ocLazyLoad) {
-          return $ocLazyLoad.load([
-            "app/pages/contact/contact.controller.js",
-            "app/pages/contact/contact.style.css",
-          ]);
-        },
-      },
-    })
-
-    // Default Route
-    .otherwise({
-      redirectTo: "/login", // Redirect to home for undefined routes
     });
+  });
+
+  $routeProvider.otherwise({
+    redirectTo: "/login", // Redirect to login for undefined routes
+  });
 });
