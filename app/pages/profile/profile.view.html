@@ -1,3 +1,276 @@
 <div class="app-container">
-  <div class="app-container-content">Content</div>
+  <div class="app-container-content">
+    <div
+      class="grid sm:grid-cols-1 md:grid-cols-10 gap-3 hover:grid-flow-row text-[#eee]"
+    >
+      <div
+        class="sm:col-span-10 md:col-span-3 lg:col-span-3 xl:col-span-2 border rounded-md px-3"
+      >
+        <div class="grid min-h-[20px] place-items-center my-5">
+          <img
+            class="object-cover object-center rounded-full h-50 w-50"
+            src="../../../assets/images/img1.jpg"
+            alt="nature image"
+          />
+        </div>
+        <hr class="my-5" />
+        <div class="grid min-h-[20px] place-items-center">
+          <ul class="w-full">
+            <li
+              class="hover:bg-[#eeeeee81] w-full rounded-md px-2 py-1 cursor-pointer"
+            >
+              Downloads
+            </li>
+            <li
+              class="hover:bg-[#eeeeee81] w-full rounded-md px-2 py-1 cursor-pointer"
+            >
+              Reports
+            </li>
+            <li
+              class="hover:bg-[#eeeeee81] w-full rounded-md px-2 py-1 cursor-pointer"
+            >
+              Privileges
+            </li>
+            <li
+              class="hover:bg-[#eeeeee81] w-full rounded-md px-2 py-1 cursor-pointer"
+            >
+              Access
+            </li>
+            <li
+              class="hover:bg-[#eeeeee81] w-full rounded-md px-2 py-1 cursor-pointer"
+            >
+              Last Records
+            </li>
+            <li
+              class="hover:bg-[#eeeeee81] w-full rounded-md px-2 py-1 cursor-pointer"
+            >
+              Top 10 Post
+            </li>
+            <li
+              class="hover:bg-[#eeeeee81] w-full rounded-md px-2 py-1 cursor-pointer"
+            >
+              Roles
+            </li>
+            <li
+              class="hover:bg-[#eeeeee81] w-full rounded-md px-2 py-1 cursor-pointer"
+            >
+              Manage Profile
+            </li>
+            <li
+              class="hover:bg-[#eeeeee81] w-full rounded-md px-2 py-1 cursor-pointer"
+            >
+              Request
+            </li>
+            <li
+              class="hover:bg-[#eeeeee81] w-full rounded-md px-2 py-1 cursor-pointer"
+            >
+              Topics
+            </li>
+            <li
+              class="hover:bg-[#eeeeee81] w-full rounded-md px-2 py-1 cursor-pointer"
+            >
+              Friends
+            </li>
+            <li
+              class="hover:bg-[#eeeeee81] w-full rounded-md px-2 py-1 cursor-pointer"
+            >
+              Followers
+            </li>
+            <li
+              class="hover:bg-[#eeeeee81] w-full rounded-md px-2 py-1 cursor-pointer"
+            >
+              Following
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="sm:col-span-10 md:col-span-7 lg:col-span-7 xl:col-span-8 border rounded-md px-3"
+      >
+        <div
+          class="rounded-xl text-center mt-4 p-3 bg-gradient-to-r from-[#336094] to-[#013763]"
+        >
+          Kamran Tajerbashi
+        </div>
+        <form action="">
+          <div class="grid grid-cols-6 gap-3 my-5">
+            <div class="col-span-3">
+              <div class="relative z-0 w-full mb-5 group">
+                <input
+                  type="text"
+                  ng-model="profileViewModel.email"
+                  name="email"
+                  ng-model="profileViewModel.email"
+                  id="floating_email"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_email"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >Email</label
+                >
+              </div>
+            </div>
+            <div class="col-span-3">
+              <div class="relative z-0 w-full mb-5 group">
+                <input
+                  type="text"
+                  ng-model="profileViewModel.name"
+                  name="floating_email"
+                  id="floating_email"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_email"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >Name</label
+                >
+              </div>
+            </div>
+            <div class="col-span-3">
+              <div class="relative z-0 w-full mb-5 group">
+                <input
+                  type="text"
+                  ng-model="profileViewModel.family"
+                  name="floating_email"
+                  id="floating_email"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_email"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >Family</label
+                >
+              </div>
+            </div>
+            <div class="col-span-3">
+              <div class="relative z-0 w-full mb-5 group">
+                <input
+                  type="text"
+                  ng-model="profileViewModel.phoneNumber"
+                  name="floating_email"
+                  id="floating_email"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_email"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >Phone Number</label
+                >
+              </div>
+            </div>
+            <div class="col-span-3">
+              <div class="relative z-0 w-full mb-5 group">
+                <input
+                  type="text"
+                  ng-model="profileViewModel.username"
+                  name="floating_email"
+                  id="floating_email"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_email"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >Username</label
+                >
+              </div>
+            </div>
+            <div class="col-span-3">
+              <div class="relative z-0 w-full mb-5 group">
+                <input
+                  type="text"
+                  ng-model="profileViewModel.password"
+                  name="floating_email"
+                  id="floating_email"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_email"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >Password</label
+                >
+              </div>
+            </div>
+            <div class="col-span-1">
+              <div class="flex items-start my-5">
+                <div class="flex items-center h-5">
+                  <input
+                    id="remember"
+                    ng-model="profileViewModel.isRemember"
+                    type="checkbox"
+                    value=""
+                    class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+                    required
+                  />
+                </div>
+                <label
+                  for="remember"
+                  class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >Remember me</label
+                >
+              </div>
+            </div>
+            <div class="col-span-3">
+              <div class="flex items-start my-5">
+                <label
+                  for="countries"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Select your country</label
+                >
+                <select
+                  id="countries"
+                  ng-model="profileViewModel.country"
+                  class="bg-[#eee0] focus:bg-[#eee0] text-[#ffffff] border border-gray-300 rounded-lg block w-full p-2.5"
+                >
+                  <option class="text-[#000]" value="1">US</option>
+                  <option class="text-[#000]" value="2">UK</option>
+                  <option class="text-[#000]" value="3">Canada</option>
+                  <option class="text-[#000]" value="4">Spain</option>
+                  <option class="text-[#000]" value="5">Afg</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-span-2">
+              <div class="relative z-0 w-full mb-5 group">
+                <label
+                  ng-model="profileViewModel.image"
+                  for="remember"
+                  class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300 w-full"
+                  >Upload file</label
+                >
+                <div class="flex items-center my-2 h-5">
+                  <input
+                    class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                    aria-describedby="user_avatar_help"
+                    id="user_avatar"
+                    type="file"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-span-6">
+              <button
+                type="submit"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Save Changes
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
