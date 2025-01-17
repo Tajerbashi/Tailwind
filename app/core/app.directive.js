@@ -1,2 +1,1 @@
-console.log("App.Directive.js Run ...", app);
-
+console.log("App.Directive.js Run", app);

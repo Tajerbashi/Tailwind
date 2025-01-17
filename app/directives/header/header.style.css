@@ -18,6 +18,7 @@
   box-shadow: 0 2px 20px 0px #02000e;
   backdrop-filter: blur(10px);
   background: rgba(2, 0, 14, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.322);
 }
 #mobile-menu {
   position: absolute;
