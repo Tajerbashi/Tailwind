@@ -1,6 +1,13 @@
 app.controller("ProjectsController", [
   "$scope",
   function ($scope) {
-    $scope.message = "This is the Calendar Page!";
+    $scope.sliders = [
+      { img: "" },
+      { img: "" },
+      { img: "" },
+      { img: "" },
+      { img: "" },
+      { img: "" },
+    ];
   },
 ]);

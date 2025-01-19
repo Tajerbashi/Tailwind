@@ -22,7 +22,7 @@ body {
 .app-container-title,
 .app-container-content,
 .app-container-footer {
-  border: 1px solid #535353;
+  border: 1px solid #969696;
   border-radius: 10px;
   box-shadow: 0 3px 5px 2px rgba(0, 0, 0, 0.5);
   margin: 15px;
@@ -30,7 +30,14 @@ body {
   overflow: auto;
 }
 .app-container-title {
-  background: rgb(45, 55, 114);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.1)
+  );
+  color: white;
+  text-align: center;
 }
 .app-container-content {
   height: 77vh;
