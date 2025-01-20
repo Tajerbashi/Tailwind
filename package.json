@@ -26,6 +26,7 @@
   "devDependencies": {
     "concurrently": "^9.1.2",
     "font-awesome": "^4.7.0",
+    "fullcalendar": "^6.1.15",
     "lite-server": "^2.6.1"
   }
 }
