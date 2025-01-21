@@ -4,15 +4,30 @@
     <base href="/" />
     <meta charset="UTF-8" />
     <title>AngularJS With Tailwind</title>
-    <!-- Link Tailwind CSS via CDN for simplicity -->
 
+    <!-- Link Tailwind CSS via CDN for simplicity -->
     <link rel="stylesheet" href="./app/styles/styles.css" />
     <link rel="stylesheet" href="./app/styles/index.style.css" />
+    <link rel="stylesheet" href="./app/core/app.style.css" />
     <link rel="stylesheet" href="./app/libs/bootstrap/all.min.css" />
     <link
       rel="stylesheet"
       href="./node_modules/font-awesome/css/font-awesome.min.css"
     />
+
+    <!-- JQuery -->
+    <script src="./app/libs/jquery/jquery-3.7.1.slim.min.js"></script>
+    <!-- <script src="./app/libs/jquery/jquery-ui.min.js"></script> -->
+
+    <!-- FullCalendar JS -->
+    <script defer src="./app/libs/fullcalendar/moment.min.js"></script>
+
+    <!-- Moment-Jalaali (should be loaded after Moment.js) -->
+    <!-- <script defer src="./app/libs/fullcalendar/moment-jalaali.min.js"></script> -->
+
+    <!-- FullCalendar JS (loaded after Moment.js and Moment-Jalaali) -->
+    <script defer src="./app/libs/fullcalendar/fullcalendar.min.js"></script>
+
     <!-- AngularJS Core -->
     <script src="./app/libs/angular/angular.min.js"></script>
     <script src="./app/libs/angular/angular-route.min.js"></script>
@@ -43,6 +58,13 @@
     <script src="./app/pages/company/company.controller.js"></script>
     <script src="./app/pages/team/team.controller.js"></script>
     <script src="./app/pages/projects/projects.controller.js"></script>
+    <script src="./app/pages/calendar/calendar.controller.js"></script>
+
+    <!-- FullCalendar CSS -->
+    <link
+      rel="stylesheet"
+      href="./app/libs/fullcalendar/fullcalendar.min.css"
+    />
   </head>
   <body ng-controller="AppController" class="h-screen w-screen">
     <!-- Header Section -->

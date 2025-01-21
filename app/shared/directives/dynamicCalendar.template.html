@@ -1,0 +1,45 @@
+<!-- dynamic-calendar-template.html -->
+<div class="app-fullCalendar month">
+  <div class="app-fullCalendar-control">
+    <button ng-click="previousMonth()">Previous</button>
+    <h3>
+      {{ fullCalendar.year.currentMonth().title }} {{ fullCalendar.year.value }}
+    </h3>
+    <button ng-click="nextMonth()">Next</button>
+  </div>
+
+  <table class="calendar-table">
+    <thead>
+      <tr>
+        <th>Sun</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="week in fullCalendar.renderedCalendar track by $index">
+        <td
+          ng-repeat="day in week track by $index"
+          ng-click="eventClick(day, $event)"
+          ng-contextmenu="showContextMenu($event, day)"
+          class="calendar-td"
+        >
+          <span>{{ day }}</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Custom Context Menu -->
+<div class="custom-context-menu" ng-show="showMenu" ng-style="menuStyle">
+  <ul>
+    <li ng-click="fullCalendar.newEvent()">New Event</li>
+    <li ng-click="fullCalendar.updateEvent()">Update Event</li>
+    <li ng-click="fullCalendar.newAppointment()">New Appointment</li>
+  </ul>
+</div>

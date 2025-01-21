@@ -22,9 +22,7 @@ app.controller("AppController", [
     const loadLazy = async (scripts) => {
       await $ocLazyLoad
         .load(scripts)
-        .then(() => {
-          console.log("All scripts loaded successfully!");
-        })
+        .then(() => {})
         .catch((error) => {
           console.error("Error loading scripts:", error);
         });

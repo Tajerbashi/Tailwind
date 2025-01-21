@@ -1,0 +1,110 @@
+.calendar {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgb(148, 148, 148);
+  margin: 10px 0;
+  border-radius: 10px;
+  text-align: center;
+  color: rgb(15, 21, 56);
+}
+.fc-center {
+  background: black;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+}
+
+.app-fullCalendar {
+}
+
+.calendar-table {
+  width: 100%;
+}
+.app-fullCalendar-control > h3 {
+  background: #201a72;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #7a7a7a;
+}
+.app-fullCalendar-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid #7a7a7a;
+  padding: 5px;
+  border-radius: 5px;
+}
+.app-fullCalendar-control > button {
+  background: rgb(42, 20, 119);
+  padding: 5px 10px;
+  border: 1px solid rgb(61, 140, 230);
+  border-radius: 5px;
+}
+.app-fullCalendar-control > button:hover {
+  box-shadow: 0 0 10px 0 rgb(61, 140, 230);
+  background: rgb(29, 13, 87);
+}
+.app-fullCalendar > table {
+}
+.app-fullCalendar > table > thead {
+}
+.app-fullCalendar > table > thead > tr {
+}
+.app-fullCalendar > table > thead > tr > th {
+}
+.app-fullCalendar > table > tbody {
+}
+.app-fullCalendar > table > tbody > tr {
+}
+.app-fullCalendar > table > tbody > tr > td {
+  text-align: right;
+  cursor: pointer;
+}
+
+.app-fullCalendar > table > tbody > tr > td:hover {
+  text-align: right;
+  cursor: pointer;
+  background: rgb(201, 201, 201);
+}
+.app-fullCalendar > table > tbody > tr > td > span {
+  color: black;
+  padding: 5px;
+}
+
+.selected {
+  background-color: rgb(31, 31, 90);
+}
+.selected:hover {
+  background-color: rgb(55, 55, 151) !important;
+}
+.selected > span {
+  color: white !important; /* Optional: Change text color for contrast */
+}
+
+/* Disable right-click globally for <td> elements */
+
+/* Style for the context menu */
+.custom-context-menu {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.custom-context-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.custom-context-menu li {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.custom-context-menu li:hover {
+  background-color: #f0f0f0;
+}

@@ -1,0 +1,15 @@
+/* Basic styling for the calendar */
+.month {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #7c7c7c;
+  border-radius: 8px;
+  text-align: center;
+  color: #eee;
+}
+
+td {
+  background: #ebebeb;
+  border: 1px solid rgb(56, 56, 56);
+  height: 50px;
+}

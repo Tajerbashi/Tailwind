@@ -14,6 +14,5 @@ app.controller("ProfileController", [
       image: "../../../assets/images/img3.jpg",
     };
     $scope.profileViewModel = angular.copy($scope.emptyProfileViewModel);
-    console.log("$scope.profileViewModel : ", $scope.profileViewModel);
   },
 ]);

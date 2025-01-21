@@ -4,9 +4,6 @@ app.controller("LoginController", [
   "AuthService",
   function ($scope, $location, AuthService) {
     $scope.message = "This is the Calendar Page!";
-    console.log("$scope : ", $scope);
-    console.log("$scope : ", $location);
-
     var authService = new AuthService();
 
     $scope.loginModel = {
@@ -18,7 +15,6 @@ app.controller("LoginController", [
 
     $scope.login = function () {
       let res = authService.login($scope.loginModel);
-      console.log("RES : ", res);
       if (res) {
         $location.path("/"); // Redirect to home after login
       } else {
