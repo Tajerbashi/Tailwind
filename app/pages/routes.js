@@ -97,4 +97,18 @@ export const routes = [
     templateUrl: "app/pages/team/team.view.html",
     resolve: ["app/pages/team/team.style.css"],
   },
+  {
+    name: "flex",
+    path: "/flex",
+    controller: "FlexController",
+    templateUrl: "app/pages/flex/flex.view.html",
+    resolve: ["app/pages/flex/flex.style.css"],
+  },
+  {
+    name: "grid",
+    path: "/grid",
+    controller: "GridController",
+    templateUrl: "app/pages/grid/grid.view.html",
+    resolve: ["app/pages/grid/grid.style.css"],
+  },
 ];

@@ -1,0 +1,40 @@
+<style>
+  .app-flex-shrink {
+    display: flex;
+    gap: 10px;
+  }
+  .app-flex-shrink-item {
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-shrink: 1;
+  }
+  .app-shrink-1 {
+    flex-shrink: 1;
+  }
+  .app-shrink-2 {
+    flex-shrink: 2;
+  }
+  .app-shrink-3 {
+    flex-shrink: 3;
+  }
+  .app-shrink-4 {
+    flex-shrink: 4;
+  }
+</style>
+<div class="text-center">
+  <h1 class="text-3xl border bg-[#000] py-2 border-[#4e4e4e] my-1 text-center">
+    Flex Shrink
+  </h1>
+  <div class="app-flex-shrink">
+    <div class="app-flex-shrink-item app-grow-1">item</div>
+    <div class="app-flex-shrink-item app-shrink-2">item</div>
+    <div class="app-flex-shrink-item">item</div>
+    <div class="app-flex-shrink-item app-shrink-4">item</div>
+    <div class="app-flex-shrink-item app-grow-4">item</div>
+    <div class="app-flex-shrink-item app-grow-3">item</div>
+    <div class="app-flex-shrink-item app-shrink-2">item</div>
+    <div class="app-flex-shrink-item app-shrink-1">item</div>
+  </div>
+</div>

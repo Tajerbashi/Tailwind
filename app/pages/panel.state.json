@@ -13,6 +13,8 @@
     "./app/pages/calendar/calendar.controller.js",
     "./app/pages/aboutMe/aboutMe.controller.js",
     "./app/pages/contact/contact.controller.js",
-    "./app/pages/about/about.controller.js"
+    "./app/pages/about/about.controller.js",
+    "./app/pages/flex/flex.controller.js",
+    "./app/pages/grid/grid.controller.js"
   ]
 }
