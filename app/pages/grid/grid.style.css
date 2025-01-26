@@ -1,0 +1,27 @@
+.app-btn {
+  padding: 10px 20px;
+  width: 150px;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  margin: 10px 5px;
+}
+.app-btn:hover {
+  background: #0000008c;
+  border: 1px solid red;
+  color: white;
+  transition: ease-in-out 300ms;
+}
+.app-btn:focus {
+  background: #19695f8c;
+  border: 1px solid rgb(0, 195, 255);
+  transition: ease-in-out 500ms;
+}
+.app-btn-success {
+  background: rgb(24, 102, 76);
+}
+.app-btn-selected {
+  background: rgb(5, 189, 118);
+  border: 1px solid rgb(255, 230, 0);
+  box-shadow: 0 0 10px 0 rgb(255, 238, 0);
+}

@@ -1,0 +1,19 @@
+<div class="app-container">
+  <div class="app-container-content">
+    <div class="app-control">
+      <button
+        ng-repeat="btn in buttons"
+        ng-click="btn.action(btn)"
+        class="app-btn app-btn-success"
+        ng-class="{'app-btn-selected':btn.visible}"
+      >
+        {{btn.title}}
+      </button>
+    </div>
+    <div
+      ng-if="item.visible"
+      ng-repeat="item in buttons"
+      ng-include="item.path"
+    ></div>
+  </div>
+</div>
