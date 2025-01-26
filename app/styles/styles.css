@@ -761,6 +761,11 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
 .-mt-1 {
   margin-top: -0.25rem;
 }
@@ -825,6 +830,10 @@ video {
   margin-inline-start: auto;
 }
 
+.mt-0\.5 {
+  margin-top: 0.125rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
@@ -837,8 +846,12 @@ video {
   margin-top: 2rem;
 }
 
-.mt-0\.5 {
-  margin-top: 0.125rem;
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
 }
 
 .block {
@@ -1008,6 +1021,10 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-\[100px\] {
+  width: 100px;
 }
 
 .min-w-0 {
@@ -1392,6 +1409,11 @@ video {
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+}
+
+.border-\[\#727272\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(114 114 114 / var(--tw-border-opacity, 1));
 }
 
 .bg-\[\#000000b2\] {
@@ -1964,6 +1986,16 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.text-\[\#ff5d5d\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 93 93 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#ffad41\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 173 65 / var(--tw-text-opacity, 1));
+}
+
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -2142,6 +2174,15 @@ video {
   background-color: rgb(100 116 139 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-\[\#777\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(119 119 119 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-\[\#00000094\]:hover {
+  background-color: #00000094;
+}
+
 .hover\:text-\[\#fffaaa\]:hover {
   --tw-text-opacity: 1;
   color: rgb(255 250 170 / var(--tw-text-opacity, 1));
@@ -2204,6 +2245,10 @@ video {
 .focus\:border-indigo-500:focus {
   --tw-border-opacity: 1;
   border-color: rgb(99 102 241 / var(--tw-border-opacity, 1));
+}
+
+.focus\:border-\[\#eee0\]:focus {
+  border-color: #eee0;
 }
 
 .focus\:bg-\[\#1249459f\]:focus {
@@ -2670,14 +2715,19 @@ video {
     color: rgb(31 41 55 / var(--tw-text-opacity, 1));
   }
 
+  .dark\:text-neutral-400 {
+    --tw-text-opacity: 1;
+    color: rgb(163 163 163 / var(--tw-text-opacity, 1));
+  }
+
   .dark\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity, 1));
   }
 
-  .dark\:text-neutral-400 {
+  .dark\:text-\[\#ee0\] {
     --tw-text-opacity: 1;
-    color: rgb(163 163 163 / var(--tw-text-opacity, 1));
+    color: rgb(238 238 0 / var(--tw-text-opacity, 1));
   }
 
   .dark\:placeholder-gray-400::-moz-placeholder {

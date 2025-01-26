@@ -7,16 +7,43 @@
 </style>
 <div class="app-controller">
   <div>
-    <div class="flex">
+    <input
+      type="text"
+      ng-model="TodoTitleModel.title"
+      placeholder="Todo Task ..."
+      class="rounded-md px-3 py-1"
+    />
+    <button
+      ng-click="addTodo()"
+      class="mx-3 px-2 py-1 w-[100px] text-[#eee] hover:bg-[#00000094] rounded-md border border-[#eee]"
+    >
+      Add
+    </button>
+  </div>
+  <div>
+    <div
+      ng-repeat="item in lessons"
+      class="flex border border-[#727272] rounded-md my-1"
+    >
+      <i
+        ng-click="onDelete(item)"
+        class="fa fa-trash text-[#ff5d5d] text-2xl p-3 cursor-pointer"
+      ></i>
+      <i
+        ng-click="onEdit(item)"
+        class="fa fa-edit text-[#ffad41] text-2xl p-3 cursor-pointer"
+      ></i>
       <input
+        ng-click="togglePassed(item)"
         type="checkbox"
-        class="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+        ng-model="item.isPassed"
+        class="shrink-0 cursor-pointer w-3 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
         id="hs-default-checkbox"
       />
       <label
         for="hs-default-checkbox"
-        class="text-sm text-gray-500 ms-3 dark:text-neutral-400"
-        >Default checkbox</label
+        class="text-gray-500 mt-1 mx-3 dark:text-[#ee0] text-xl"
+        >{{item.title}}</label
       >
     </div>
   </div>
