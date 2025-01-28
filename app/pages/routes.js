@@ -111,4 +111,11 @@ export const routes = [
     templateUrl: "app/pages/grid/grid.view.html",
     resolve: ["app/pages/grid/grid.style.css"],
   },
+  {
+    name: "todo",
+    path: "/todo",
+    controller: "TodoController",
+    templateUrl: "app/pages/todo/todo.view.html",
+    resolve: ["app/pages/todo/todo.style.css"],
+  },
 ];

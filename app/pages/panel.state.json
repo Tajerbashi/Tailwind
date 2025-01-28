@@ -15,6 +15,7 @@
     "./app/pages/contact/contact.controller.js",
     "./app/pages/about/about.controller.js",
     "./app/pages/flex/flex.controller.js",
-    "./app/pages/grid/grid.controller.js"
+    "./app/pages/grid/grid.controller.js",
+    "./app/pages/todo/todo.controller.js"
   ]
 }

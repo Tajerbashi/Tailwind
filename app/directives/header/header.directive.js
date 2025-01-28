@@ -29,6 +29,7 @@ app.directive("appHeader", function ($location, AuthService) {
         { title: "Explore", link: "#!/explore", icon: "" },
         { title: "Flex", link: "#!/flex", icon: "" },
         { title: "Grid", link: "#!/grid", icon: "" },
+        { title: "Todo", link: "#!/todo", icon: "" },
       ];
 
       openNotification = (id) => {
