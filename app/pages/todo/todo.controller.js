@@ -1,8 +1,7 @@
 app.controller("TodoController", [
   "$scope",
   function ($scope, $window) {
-    const datakey = "Datasource";
-    const toggleVisible = (item) => (item.visible = !item.visible);
+    const datakey = "TodoDataSource";
 
     $scope.lessons = [];
     $scope.emptyTodoTitle = {
@@ -43,19 +42,16 @@ app.controller("TodoController", [
       model.isPassed = !model.isPassed;
       updateDatasource($scope.lessons);
     };
-
     const updateDatasource = (data) => {
       localStorage.removeItem(datakey);
       localStorage.setItem(datakey, JSON.stringify(data));
       onInit();
     };
-
     const getData = () => {
       var data = localStorage.getItem(datakey);
       var result = JSON.parse(data);
       return result;
     };
-
     const onInit = () => {
       $scope.TodoTitleModel = angular.copy($scope.emptyTodoTitle);
       var data = getData();
@@ -66,27 +62,6 @@ app.controller("TodoController", [
       }
     };
     onInit();
-    const basePath = "/app/pages/grid/templates/";
-    $scope.buttons = [
-      {
-        title: "Controller",
-        action: (item) => {
-          toggleVisible(item);
-        },
-        visible: true,
-        path: basePath + "controller.html",
-      },
-
-      {
-        title: "Grid",
-        action: (item) => {
-          toggleVisible(item);
-        },
-        visible: false,
-        path: basePath + "gridContainer.html",
-      },
-    ];
-
     const newId = () => {
       return Math.floor(Math.random() * 10000000);
     };
