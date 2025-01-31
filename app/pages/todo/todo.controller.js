@@ -1,46 +1,77 @@
 app.controller("TodoController", [
   "$scope",
+  "$window",
   function ($scope, $window) {
     const datakey = "TodoDataSource";
 
-    $scope.lessons = [];
-    $scope.emptyTodoTitle = {
+    $scope.groups = [];
+    $scope.clearSources = () => {
+      localStorage.removeItem(datakey);
+    };
+    $scope.emptyGroup = {
       id: undefined,
       title: "",
-      isPassed: false,
+      child: { id: undefined, title: "" },
+      pin: false,
+      visible: true,
     };
-    $scope.TodoTitleModel = angular.copy($scope.emptyTodoTitle);
-    $scope.addTodo = () => {
-      if ($scope.TodoTitleModel.id) {
-        console.log("$scope.lessons : ", $scope.lessons);
-        var model = $scope.lessons.findIndex(
-          (item) => item.id == $scope.TodoTitleModel.id
-        );
-        $scope.lessons[model] = $scope.TodoTitleModel;
-        console.log("model : ", model);
-        console.log("$scope.TodoTitleModel : ", $scope.TodoTitleModel);
-        console.log("$scope.lessons : ", $scope.lessons);
-      } else {
-        $scope.TodoTitleModel.id = newId();
-        $scope.lessons.push($scope.TodoTitleModel);
-      }
-      updateDatasource($scope.lessons);
-    };
-    $scope.onDelete = (item) => {
-      var model = $scope.lessons.filter((element) => element.id !== item.id);
+    $scope.GroupModel = angular.copy($scope.emptyGroup);
 
+    $scope.addGroup = () => {
+      let newGroup = {
+        id: newId(),
+        title: $scope.GroupModel.title,
+        items: [],
+      };
+      $scope.groups.push(newGroup);
+      updateDatasource($scope.groups);
+      $scope.GroupModel = angular.copy($scope.emptyGroup);
+    };
+
+    $scope.addTodo = (group) => {
+      if (group.child.id == undefined) {
+        group.items.push({
+          id: newId(),
+          title: angular.copy(group.child.title),
+          isPassed: false,
+          updateDate: new Date().toLocaleString(),
+        });
+      } else {
+        var model = group.items.find((elem) => elem.id == group.child.id);
+        model.title = group.child.title;
+        model.updateDate = new Date().toLocaleString();
+
+        var index = group.items.findIndex((item) => item.id == model.id);
+        group.items[index] = model;
+      }
+
+      group.child = {
+        title: "",
+        id: undefined,
+      };
+
+      updateDatasource($scope.groups);
+    };
+    $scope.onDelete = (group, item) => {
+      var model = group.items.filter((element) => element.id !== item.id);
+      group.items = angular.copy(model);
+      var index = $scope.groups.findIndex((item) => item.id == group.id);
+      $scope.groups[index] = angular.copy(group);
       if (confirm("Are You Sure Delete Item ( " + item.title + " )?")) {
-        updateDatasource(model);
+        updateDatasource($scope.groups);
       } else {
       }
     };
-    $scope.onEdit = (item) => {
-      $scope.TodoTitleModel = angular.copy(item);
+    $scope.onEdit = (group, item) => {
+      group.child = {
+        id: angular.copy(item.id),
+        title: angular.copy(item.title),
+      };
     };
-    $scope.togglePassed = (item) => {
-      var model = $scope.lessons.find((element) => element.id === item.id);
+    $scope.togglePassed = (groups, item) => {
+      var model = groups.items.find((element) => element.id === item.id);
       model.isPassed = !model.isPassed;
-      updateDatasource($scope.lessons);
+      updateDatasource($scope.groups);
     };
     const updateDatasource = (data) => {
       localStorage.removeItem(datakey);
@@ -53,17 +84,15 @@ app.controller("TodoController", [
       return result;
     };
     const onInit = () => {
-      $scope.TodoTitleModel = angular.copy($scope.emptyTodoTitle);
+      $scope.groups = [];
       var data = getData();
       if (data) {
-        $scope.lessons = angular.copy(data);
+        $scope.groups = angular.copy(data);
       } else {
-        $scope.lessons = [];
+        $scope.groups = [];
       }
     };
     onInit();
-    const newId = () => {
-      return Math.floor(Math.random() * 10000000);
-    };
+    const newId = () => Math.floor(Math.random() * 10000000);
   },
 ]);

@@ -1,0 +1,33 @@
+.app-controller {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.app-group {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.app-group-content {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 10px;
+  color: wheat;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.app-group-item {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: left;
+}
+.app-todo-item-label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}

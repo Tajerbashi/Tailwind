@@ -1,54 +1,143 @@
 <div class="app-container">
   <div class="app-container-content">
-    <style>
-      .app-controller {
-        border: 1px solid white;
-        padding: 10px;
-        border-radius: 10px;
-      }
-    </style>
-    <div class="app-controller">
-      <div>
+    <div class="app-group">
+      <div class="app-controller">
         <input
           type="text"
-          ng-model="TodoTitleModel.title"
-          placeholder="Todo Task ..."
-          class="rounded-md px-3 py-1"
+          ng-model="GroupModel.title"
+          placeholder="Add Group Todo ..."
+          class="w-1/2 rounded-md px-3 py-1 text-[#ffcd9e] focus:border-[#eee0] bg-[#00000071]"
         />
-        <button
-          ng-click="addTodo()"
-          class="mx-3 px-2 py-1 w-[100px] text-[#eee] hover:bg-[#00000094] rounded-md border border-[#eee]"
-        >
-          Add
-        </button>
-      </div>
-      <div>
-        <div
-          ng-repeat="item in lessons"
-          class="flex border border-[#727272] rounded-md my-1"
-        >
-          <i
-            ng-click="onDelete(item)"
-            class="fa fa-trash text-[#ff5d5d] text-2xl p-3 cursor-pointer"
-          ></i>
-          <i
-            ng-click="onEdit(item)"
-            class="fa fa-edit text-[#ffad41] text-2xl p-3 cursor-pointer"
-          ></i>
-          <input
-            ng-click="togglePassed(item)"
-            type="checkbox"
-            ng-model="item.isPassed"
-            class="shrink-0 cursor-pointer w-3 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
-            id="hs-default-checkbox"
-          />
-          <label
-            for="hs-default-checkbox"
-            class="text-gray-500 mt-1 mx-3 dark:text-[#ee0] text-xl"
-            >{{item.title}}</label
+        <div class="w-1/2">
+          <button
+            ng-click="addGroup()"
+            class="mx-3 px-2 py-1 text-[#eee] hover:bg-[#38964494] rounded-md border border-[#eee]"
           >
+            Add
+          </button>
+          <button
+            ng-click="clearSources()"
+            class="mx-3 px-2 py-1 text-[#eee] hover:bg-[#ff1b1b94] rounded-md border border-[#eee]"
+          >
+            Clear Sources
+          </button>
+        </div>
+      </div>
+    </div>
+    <div ng-if="groups.length > 0" class="app-group-content">
+      <div ng-repeat="group in groups" class="app-group-item">
+        <div
+          class="flex flex-row justify-evenly text-center text-[20px] border border-[#ffffff85] rounded-md bg-[#0000004f] p-1"
+        >
+          <span>{{group.title}}</span>
+          <div>
+            <i class="fa fa-check cursor-pointer"></i>
+            <i
+              title="Show Group"
+              class="fa fa-hand-point-down cursor-pointer"
+            ></i>
+            <i title="Show Group" class="fa fa-lock cursor-pointer"></i>
+            <i title="Show Group" class="fa fa-lock-open cursor-pointer"></i>
+            <i title="Show Group" class="fa fa-id-badge cursor-pointer"></i>
+          </div>
+        </div>
+        <div class="border border-[#eeeeee79] rounded-md p-1 my-1">
+          <input
+            type="text"
+            ng-model="group.child.title"
+            placeholder="Add Todo Item For {{group.title}}"
+            class="rounded-md w-4/5 px-3 py-1 text-[#ffffff] focus:border-[#eee0] bg-[#0000003f]"
+          />
+          <button
+            ng-click="addTodo(group)"
+            class="mx-3 px-2 py-1 text-[#eee] hover:bg-[#46464694] rounded-md border border-[#eeeeee7e]"
+          >
+            {{group.child.id > 0 ? "Edit" : "Add"}}
+          </button>
+        </div>
+        <div
+          ng-if="group.items.length > 0"
+          class="border border-[#eeeeee73] my-1 rounded-md"
+        >
+          <div
+            class="flex flex-row justify-around border border-[#eeeeee73] m-1 p-1 rounded-md"
+          >
+            <div>Information</div>
+            <div>LastUpdateDate</div>
+          </div>
+          <ul>
+            <li class="flex flex-row" ng-repeat="item in group.items">
+              <i
+                ng-click="onDelete(group,item)"
+                class="fa fa-trash text-[#ff5d5d] text-2xl p-3 cursor-pointer"
+              ></i>
+              <i
+                ng-click="onEdit(group,item)"
+                class="fa fa-edit text-[#ff9b18] text-2xl p-3 cursor-pointer"
+              ></i>
+              <input
+                ng-click="togglePassed(group,item)"
+                type="checkbox"
+                ng-model="item.isPassed"
+                class="shrink-0 cursor-pointer w-3 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                id="hs-default-checkbox"
+              />
+              <label
+                for="hs-default-checkbox"
+                class="app-todo-item-label text-gray-500 mt-1 mx-3 dark:text-[#ffecb8] text-xl"
+                ><span>{{$index+1}} : {{item.title}}</span
+                ><span> {{item.updateDate}}</span></label
+              >
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<!-- 
+ <div class="app-container">
+  <div class="app-container-content">
+    <div class="app-controller">
+      <input
+        type="text"
+        ng-model="TodoTitleModel.title"
+        placeholder="Todo Task ..."
+        class="rounded-md px-3 py-1"
+      />
+      <button
+        ng-click="addTodo()"
+        class="mx-3 px-2 py-1 w-[100px] text-[#eee] hover:bg-[#00000094] rounded-md border border-[#eee]"
+      >
+        Add
+      </button>
+    </div>
+    <div
+      ng-repeat="item in lessons"
+      class="flex border border-[#727272] rounded-md my-1"
+    >
+      <i
+        ng-click="onDelete(item)"
+        class="fa fa-trash text-[#ff5d5d] text-2xl p-3 cursor-pointer"
+      ></i>
+      <i
+        ng-click="onEdit(item)"
+        class="fa fa-edit text-[#ffad41] text-2xl p-3 cursor-pointer"
+      ></i>
+      <input
+        ng-click="togglePassed(item)"
+        type="checkbox"
+        ng-model="item.isPassed"
+        class="shrink-0 cursor-pointer w-3 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+        id="hs-default-checkbox"
+      />
+      <label
+        for="hs-default-checkbox"
+        class="text-gray-500 mt-1 mx-3 dark:text-[#ee0] text-xl"
+        >{{item.title}}</label
+      >
+    </div>
+  </div>
+</div>
+ -->

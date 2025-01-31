@@ -721,6 +721,10 @@ video {
   margin: auto;
 }
 
+.m-1 {
+  margin: 0.25rem;
+}
+
 .mx-1 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -1015,12 +1019,44 @@ video {
   width: 150px;
 }
 
+.w-\[80\%\] {
+  width: 80%;
+}
+
+.w-\[82\%\] {
+  width: 82%;
+}
+
 .w-full {
   width: 100%;
 }
 
 .w-screen {
   width: 100vw;
+}
+
+.w-\[7\%\] {
+  width: 7%;
+}
+
+.w-\[70\%\] {
+  width: 70%;
+}
+
+.w-\[50\%\] {
+  width: 50%;
+}
+
+.w-2\/3 {
+  width: 66.666667%;
+}
+
+.w-1 {
+  width: 0.25rem;
+}
+
+.w-4\/5 {
+  width: 80%;
 }
 
 .min-w-0 {
@@ -1218,6 +1254,10 @@ video {
   justify-content: space-around;
 }
 
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
 .gap-1 {
   gap: 0.25rem;
 }
@@ -1283,6 +1323,14 @@ video {
 .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-divide-opacity, 1));
+}
+
+.self-center {
+  align-self: center;
+}
+
+.self-stretch {
+  align-self: stretch;
 }
 
 .overflow-hidden {
@@ -1364,6 +1412,11 @@ video {
   border-color: rgb(78 78 78 / var(--tw-border-opacity, 1));
 }
 
+.border-\[\#535353\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(83 83 83 / var(--tw-border-opacity, 1));
+}
+
 .border-\[\#646464\] {
   --tw-border-opacity: 1;
   border-color: rgb(100 100 100 / var(--tw-border-opacity, 1));
@@ -1394,12 +1447,24 @@ video {
   border-color: rgb(238 238 238 / var(--tw-border-opacity, 1));
 }
 
+.border-\[\#eeeeee79\] {
+  border-color: #eeeeee79;
+}
+
+.border-\[\#eeeeee7e\] {
+  border-color: #eeeeee7e;
+}
+
 .border-\[\#fffb\] {
   border-color: #fffb;
 }
 
 .border-\[\#ffffff83\] {
   border-color: #ffffff83;
+}
+
+.border-\[\#ffffff85\] {
+  border-color: #ffffff85;
 }
 
 .border-gray-200 {
@@ -1410,6 +1475,22 @@ video {
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+}
+
+.border-\[\#eeeeee73\] {
+  border-color: #eeeeee73;
+}
+
+.bg-\[\#0000003f\] {
+  background-color: #0000003f;
+}
+
+.bg-\[\#0000004f\] {
+  background-color: #0000004f;
+}
+
+.bg-\[\#00000071\] {
+  background-color: #00000071;
 }
 
 .bg-\[\#000000b2\] {
@@ -1792,6 +1873,10 @@ video {
   text-align: center;
 }
 
+.align-middle {
+  vertical-align: middle;
+}
+
 .font-sans {
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -1814,6 +1899,10 @@ video {
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
+}
+
+.text-\[20px\] {
+  font-size: 20px;
 }
 
 .text-base {
@@ -1922,6 +2011,11 @@ video {
   color: rgb(255 173 65 / var(--tw-text-opacity, 1));
 }
 
+.text-\[\#ffcd9e\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 205 158 / var(--tw-text-opacity, 1));
+}
+
 .text-\[\#ffffff\] {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
@@ -1990,6 +2084,16 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#ffdeb2\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 222 178 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#ff9b18\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 155 24 / var(--tw-text-opacity, 1));
 }
 
 .shadow {
@@ -2130,6 +2234,10 @@ video {
   background-color: rgb(32 32 32 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-\[\#46464694\]:hover {
+  background-color: #46464694;
+}
+
 .hover\:bg-\[\#ea20bc\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(234 32 188 / var(--tw-bg-opacity, 1));
@@ -2172,6 +2280,14 @@ video {
 .hover\:bg-slate-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(100 116 139 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-\[\#ff1b1b94\]:hover {
+  background-color: #ff1b1b94;
+}
+
+.hover\:bg-\[\#38964494\]:hover {
+  background-color: #38964494;
 }
 
 .hover\:text-\[\#fffaaa\]:hover {
@@ -2221,6 +2337,10 @@ video {
 
 .focus\:border-\[\#34aaa29f\]:focus {
   border-color: #34aaa29f;
+}
+
+.focus\:border-\[\#eee0\]:focus {
+  border-color: #eee0;
 }
 
 .focus\:border-blue-500:focus {
@@ -2710,6 +2830,11 @@ video {
   .dark\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  }
+
+  .dark\:text-\[\#ffecb8\] {
+    --tw-text-opacity: 1;
+    color: rgb(255 236 184 / var(--tw-text-opacity, 1));
   }
 
   .dark\:placeholder-gray-400::-moz-placeholder {
